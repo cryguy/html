@@ -1025,9 +1025,11 @@
 			}
 
 		}
-
+	.img-circle {
+		border-radius: 50%;
+	}
 /* Intro */
-
+	
 	.bg {
 		background-attachment: fixed;
 		background-image: url("images/intro.svg");
