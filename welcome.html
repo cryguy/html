@@ -29,7 +29,7 @@
           var $this = $(this),
             target = $this.data('target');       
           // Load target page into container
-          container.load(target);
+          container.load(target).hide().fadeIn('slow');
 		  loadedpage = target.replace(/\s(.*)/ , '')
 		  
 		  history.pushState(null, null, loadedpage);
