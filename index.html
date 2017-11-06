@@ -28,9 +28,9 @@
           // Set $this for re-use. Set target from data attribute
           var $this = $(this),
             target = $this.data('target');       
-			console.log(target);
           // Load target page into container
           container.load(target + '.html');
+		  history.pushState(null, null, target + '.html');
           
           // Stop normal link behavior
           return false;
