@@ -23,12 +23,12 @@
         var trigger = $('#nav'),
             container = $('#content');
         // Fire on click
-		console.log(trigger);
+		
         trigger.on('click', function(){
           // Set $this for re-use. Set target from data attribute
           var $this = $(this),
             target = $this.data('target');       
-          
+			console.log(target);
           // Load target page into container
           container.load(target + '.html');
           
