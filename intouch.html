@@ -5,41 +5,51 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<title>Hyperspace by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
 
-	<script>
-      $(document).ready(function(){
-        // Set trigger and container variables
-        var trigger = $('nav li a'),
-            container = $('#wrapper');
-        // Fire on click
-		
-        trigger.on('click', function(){
-          // Set $this for re-use. Set target from data attribute
-          var $this = $(this),
-            target = $this.data('target');       
-          // Load target page into container
-          container.load(target).hide().fadeIn('slow');
-		  loadedpage = target.replace(/\s(.*)/,'')
-		  
-		  history.pushState(null, null, loadedpage);
-          
-          // Stop normal link behavior
-          return false;
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Hyperspace by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function() {
+            // Set trigger and container variables
+            var trigger = $('nav li a'),
+                container = $('#wrapper');
+            // Fire on click
+
+            trigger.on('click', function() {
+                // Set $this for re-use. Set target from data attribute
+                var $this = $(this),
+                    target = $this.data('target');
+                // Load target page into container
+                container.load(target).hide().fadeIn('slow');
+                loadedpage = target.replace(/\s(.*)/, '')
+
+                history.pushState(null, null, loadedpage);
+
+                // Stop normal link behavior
+                return false;
+            });
         });
-      });
     </script>
-		<!-- Sidebar -->
+    <!-- Sidebar -->
     <section id="sidebar" class="split">
         <div class="inner">
             <nav>
@@ -61,98 +71,99 @@
         </div>
     </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Intro -->
-					<section id="intouch" class="bg wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="field half first">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="5"></textarea>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Email</h3>
-											<a href="#">admin@imanity.us</a>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://git.io/vFlOl" class="fa-github"><span class="label">GitHub</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-			</div>
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Shy, All rights reserved.</li>
-					</ul>
-				</div>
-			</footer>
-							<script>
-	var typed = new Typed(".typed", {
-	strings: ["an Independent Web Developer.", "a Coder.", "a Security Researcher."],
-	smartBackspace: true, // Default value
-	typeSpeed: 80,
-    starDelay: 200,
-    backDelay: 600,
-	backSpeed: 80,
-    loop: true,
-    showCursor: true,
-    cursorChar: "|"
-	});
-</script>
-<style>
- .typed-cursor {
-        opacity: 1;
-        animation: blink .7s infinite;
-    }
-
-    @keyframes blink {
-        0% {
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Intro -->
+        <section id="intouch" class="bg wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Get in touch</h2>
+                <div class="split style1">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="field half first">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="5"></textarea>
+                            </div>
+                            <ul class="actions">
+                                <li><a href="" class="button submit">Send Message</a>
+                                </li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Email</h3>
+                                <a href="#">admin@imanity.us</a>
+                            </li>
+                            <li>
+                                <h3>Social</h3>
+                                <ul class="icons">
+                                    <li><a href="https://git.io/vFlOl" class="fa-github"><span class="label">GitHub</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Shy, All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        var typed = new Typed(".typed", {
+            strings: ["an Independent Web Developer.", "a Coder.", "a Security Researcher."],
+            smartBackspace: true, // Default value
+            typeSpeed: 80,
+            starDelay: 200,
+            backDelay: 600,
+            backSpeed: 80,
+            loop: true,
+            showCursor: true,
+            cursorChar: "|"
+        });
+    </script>
+    <style>
+        .typed-cursor {
             opacity: 1;
+            animation: blink .7s infinite;
         }
-        50% {
-            opacity: 0;
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
-        100% {
-            opacity: 1;
-        }
-    }
-</style>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+    </style>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
-

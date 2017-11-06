@@ -5,49 +5,51 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<title>Hyperspace by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-	<script>
-      $(document).ready(function(){
-        // Set trigger and container variables
-        var trigger = $('nav li a'),
-            container = $('#wrapper');
-        // Fire on click
-		
-        trigger.on('click', function(){
-          // Set $this for re-use. Set target from data attribute
-          var $this = $(this),
-            target = $this.data('target');       
-          // Load target page into container
-          container.load(target).hide().fadeIn('slow');
-		  loadedpage = target.replace(/\s(.*)/,'')
-		  
-		  history.pushState(null, null, loadedpage);
-          
-          // Stop normal link behavior
-          return false;
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Hyperspace by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function() {
+            // Set trigger and container variables
+            var trigger = $('nav li a'),
+                container = $('#wrapper');
+            // Fire on click
+
+            trigger.on('click', function() {
+                // Set $this for re-use. Set target from data attribute
+                var $this = $(this),
+                    target = $this.data('target');
+                // Load target page into container
+                container.load(target).hide().fadeIn('slow');
+                loadedpage = target.replace(/\s(.*)/, '')
+
+                history.pushState(null, null, loadedpage);
+
+                // Stop normal link behavior
+                return false;
+            });
         });
-      });
     </script>
-		<!-- Sidebar -->
+    <!-- Sidebar -->
     <section id="sidebar" class="split">
         <div class="inner">
             <nav>
@@ -69,75 +71,74 @@
         </div>
     </section>
 
-		<!-- Wrapper -->
-				<div id="wrapper">					
-					<section id="team" class="wrapper style1 spotlights">
-						<section style="padding-top: 50px;">
-						<br>
-							<img src="images/white.png" alt="" class="img-circle" height="300" width="300"/>
-							<div class="content">
-								<div class="inner">
-									<h2>White</h2>
-									<p>Coder.</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<img src="images/shy.png" alt="" class="img-circle" height="300" width="300"/>
-							<div class="content">
-								<div class="inner">
-									<h2>Shy</h2>
-									<p>Coder - Website, Loader,Forums.</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<img src="images/keke.jpg" alt="" class="img-circle" height="300" width="300"/>
-							<div class="content">
-								<div class="inner">
-									<h2>Keke</h2>
-									<p>Forum Admin - legal , user management.</p>
-								</div>
-							</div>
-						</section>
-					</section>
-				</div>
-						<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Shy, All rights reserved.</li>
-					</ul>
-				</div>
-			</footer>
-			
-<style>
- .typed-cursor {
-        opacity: 1;
-        animation: blink .7s infinite;
-    }
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <section id="team" class="wrapper style1 spotlights">
+            <section style="padding-top: 50px;">
+                <br>
+                <img src="images/white.png" alt="" class="img-circle" height="300" width="300" />
+                <div class="content">
+                    <div class="inner">
+                        <h2>White</h2>
+                        <p>Coder.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <img src="images/shy.png" alt="" class="img-circle" height="300" width="300" />
+                <div class="content">
+                    <div class="inner">
+                        <h2>Shy</h2>
+                        <p>Coder - Website, Loader,Forums.</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <img src="images/keke.jpg" alt="" class="img-circle" height="300" width="300" />
+                <div class="content">
+                    <div class="inner">
+                        <h2>Keke</h2>
+                        <p>Forum Admin - legal , user management.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Shy, All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
 
-    @keyframes blink {
-        0% {
+    <style>
+        .typed-cursor {
             opacity: 1;
+            animation: blink .7s infinite;
         }
-        50% {
-            opacity: 0;
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
-        100% {
-            opacity: 1;
-        }
-    }
-</style>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+    </style>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
-
