@@ -29,8 +29,10 @@
           var $this = $(this),
             target = $this.data('target');       
           // Load target page into container
-          container.load(target + '.html');
-		  history.pushState(null, null, target + '.html');
+          container.load(target);
+		  loadedpage = target.replace(/\s(.*)/,'')
+		  
+		  history.pushState(null, null, target);
           
           // Stop normal link behavior
           return false;
@@ -42,8 +44,8 @@
 				<div class="inner">
 					<nav>
 						<ul>
-							<li><a href="#welcome" data-target="welcome">Welcome</a></li>
-							<li><a href="#intouch" data-target="intouch">Get in touch</a></li>
+							<li><a href="#welcome" data-target="welcome.html #welcome">Welcome</a></li>
+							<li><a href="#intouch" data-target="intouch.html #intouch">Get in touch</a></li>
 						</ul>
 					</nav>
 				</div>
