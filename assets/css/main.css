@@ -3882,7 +3882,7 @@
 
 /* Intro */
 
-	#intro {
+	.bg {
 		background-attachment: fixed;
 		background-image: url("images/intro.svg");
 		background-position: top right;
@@ -3890,7 +3890,7 @@
 		background-size: 100% 100%;
 	}
 
-		#intro p {
+		.bg p {
 			font-size: 1.25em;
 		}
 
