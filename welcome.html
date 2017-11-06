@@ -30,7 +30,7 @@
             target = $this.data('target');       
           // Load target page into container
           container.load(target);
-		  loadedpage = target.replace(/\s(.*)/,'')
+		  loadedpage = target.replace(/\s(.*) , '')
 		  
 		  history.pushState(null, null, target);
           
