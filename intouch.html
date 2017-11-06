@@ -32,7 +32,7 @@
           container.load(target);
 		  loadedpage = target.replace(/\s(.*)/,'')
 		  
-		  history.pushState(null, null, target);
+		  history.pushState(null, null, loadedpage);
           
           // Stop normal link behavior
           return false;
