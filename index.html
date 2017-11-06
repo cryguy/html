@@ -18,17 +18,18 @@
 	</head>
 	<body>
 	<script>
-	$(function(){
-	$(".typed").typed({
-    strings: ["an Independent Web Developer", "a Coder", "a Security Researcher"],
-    typeSpeed: 50,
+	
+	var typed = new Typed(".typed", {
+	strings: ["an Independent Web Developer", "a Coder", "a Security Researcher"],
+	smartBackspace: true // Default value
+	typeSpeed: 50,
     starDelay: 200,
     backDelay: 600,
     loop: true,
     showCursor: true,
     cursorChar: "|"
-  });
-});
+	});
+
 </script>
 	<script>
       $(document).ready(function(){
