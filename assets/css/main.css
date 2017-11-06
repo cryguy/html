@@ -1,7 +1,7 @@
 @import url(font-awesome.min.css);
 
 
-	html, body, div, span, h1, h2, a, ul, li, footer, nav, section {
+	html, body, div, h2, span, h1, p, a, img, ul, li, footer, nav, section {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -107,7 +107,11 @@
 			color: #ffffff;
 		}
 
-	h1, h2 {
+	p {
+		margin: 0 0 2em 0;
+	}
+
+	h2 {
 		color: #ffffff;
 		font-weight: bold;
 		line-height: 1.5;
@@ -277,6 +281,84 @@
 		}
 
 /* Spotlights */
+
+	.spotlights > section {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		min-height: 22.5em;
+	}
+
+		.spotlights > section > .content {
+			padding: 4em 5em 2em 5em ;
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			width: 50em;
+			-ms-flex: 1;
+		}
+
+			.spotlights > section > .content > .inner {
+				-moz-transform: translateX(0) translateY(0);
+				-webkit-transform: translateX(0) translateY(0);
+				-ms-transform: translateX(0) translateY(0);
+				transform: translateX(0) translateY(0);
+				-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+				-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+				-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+				transition: opacity 1s ease, transform 1s ease;
+				opacity: 1;
+			}
+
+		.spotlights > section:nth-child(2) {
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+
+		.spotlights > section:nth-child(3) {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		@media screen and (max-width: 1680px) {
+
+			.spotlights > section > .content {
+				padding: 4em 4em 2em 4em ;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.spotlights > section {
+				display: block;
+			}
+
+				.spotlights > section > .content {
+					width: 100%;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.spotlights > section > .content {
+				padding: 3em 2em 1em 2em ;
+			}
+
+		}
 
 /* Table */
 
@@ -658,3 +740,7 @@
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
+
+		.bg p {
+			font-size: 1.25em;
+		}
