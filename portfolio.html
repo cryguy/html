@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Imanity.US</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function() {
+            // Set trigger and container variables
+            var trigger = $('nav li a'),
+                container = $('#wrapper');
+            // Fire on click
+
+            trigger.on('click', function() {
+                // Set $this for re-use. Set target from data attribute
+                var $this = $(this),
+                    target = $this.data('target');
+                // Load target page into container
+                container.load(target).hide().fadeIn('slow');
+                loadedpage = target.replace(/\s(.*)/, '')
+
+                history.pushState(null, null, loadedpage);
+
+                // Stop normal link behavior
+                return false;
+            });
+        });
+    </script>
+    
+    <section id="sidebar" class="split">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="#welcome" data-target="welcome.html #welcome">Who are we</a>
+                    </li>
+                    <li><a href="#team" data-target="team.html #team">Team</a>
+                    </li>
+                    <li><a href="#portfolio" data-target="portfolio.html #portfolio">Portfolio</a>
+                    </li>
+                    <li><a href="#intouch" data-target="intouch.html #intouch">Get in touch</a>
+                    </li>
+                    <li><a href="https://www.imanity.us/">Forums</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    
+    <div id="wrapper">
+			<section class="bg wrapper style1 fade-up">
+				<div class="inner">
+					<h1>What we do?</h1>
+					<p>These are a few things we did</p>
+				</div>
+			</section>
+        <section id="portfolio" class="bg wrapper style1 spotlights fullscreen">
+            <section style="padding-top: 100px;">
+                <img src="images/imanity.png" alt="" class="image" width/>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Imanity.US CSGO Cheats</h2>
+                        <p>Coded by - White</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <img src="images/imanityload.png" alt="" class="image"/>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Loader For Imanity</h2>
+						<p>Backend And Frontend by Shy<p>
+                        <p>Design by Nexxed</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+		<section>
+			<h2>Imanity.US</h2>
+			<h3>Imanity Pricing Table</h3>
+		<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>VIP 1</td>
+													<td>One Month subscription to imanity.</td>
+													<td>15.00EUR</td>
+												</tr>
+												<tr>
+													<td>VIP 2</td>
+													<td>Three Month subscription to imanity.</td>
+													<td>30.00EUR</td>
+												</tr>
+												<tr>
+													<td>VIP 3</td>
+													<td>Six Month subscription to imanity.</td>
+													<td>50.00EUR</td>
+												</tr>
+												<tr>
+													<td>Custom</td>
+													<td>Custom Software/Solution.</td>
+													<td>TBD.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+    </div>
+	</section>
+    
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Shy, All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
+
+    <style>
+        .typed-cursor {
+            opacity: 1;
+            animation: blink .7s infinite;
+        }
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+		.spotlights > section > .image {
+			background-position: center center;
+			background-size: cover;
+			border-radius: 0;
+			display: block;
+			position: relative;
+			width: 25em;
+		}
+    </style>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
