@@ -1,6 +1,32 @@
 @import url(font-awesome.min.css);
 
 
+    .typed-cursor {
+		opacity: 1;
+		animation: blink .7s infinite;
+	}
+	
+   .spotlights > section > .image {
+	   background-position: center center;
+	   background-size: cover;
+	   border-radius: 0;
+	   display: block;
+	   position: relative;
+	   width: 25em;
+   }
+   
+	@keyframes blink {
+		0% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
 	html, body, div, span, h1, p, h2, h3, a, ul, li, form, label, footer, nav, section {
 		margin: 0;
 		padding: 0;

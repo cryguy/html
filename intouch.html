@@ -13,6 +13,7 @@
 <body>
 
     <script>
+		// for setting history and to disable reloading of pages, makes for smoother experience
         $(document).ready(function() {
             // Set trigger and container variables
             var trigger = $('nav li a'),
@@ -110,36 +111,6 @@
             </ul>
         </div>
     </footer>
-    <script>
-        var typed = new Typed(".typed", {
-            strings: ["an Independent Web Developer.", "a Coder.", "a Security Researcher."],
-            smartBackspace: true, // Default value
-            typeSpeed: 80,
-            starDelay: 200,
-            backDelay: 600,
-            backSpeed: 80,
-            loop: true,
-            showCursor: true,
-            cursorChar: "|"
-        });
-    </script>
-    <style>
-        .typed-cursor {
-            opacity: 1;
-            animation: blink .7s infinite;
-        }
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
     
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>

@@ -11,6 +11,7 @@
 </head>
 <body>
 	<script>
+			// for setting history and to disable reloading of pages, makes for smoother experience
 	       $(document).ready(function() {
 	           // Set trigger and container variables
 	           var trigger = $('nav li a'),
@@ -74,12 +75,10 @@
 					</div>
 				</div>
 			</section>
-		</section>
-		<section>
-			<h2>Imanity.US</h2>
-			<h3>Imanity Pricing Table</h3>
+			<section>
 			<div class="table-wrapper">
 				<table>
+				<caption>Imanity Pricing</caption>
 					<thead>
 						<tr>
 							<th>Name</th>
@@ -113,6 +112,8 @@
 			</div>
 		</section>
 	</div>
+		</section>
+
 	<footer class="wrapper style1-alt" id="footer">
 		<div class="inner">
 			<ul class="menu">
@@ -120,31 +121,6 @@
 			</ul>
 		</div>
 	</footer>
-	<style>
-	       .typed-cursor {
-	           opacity: 1;
-	           animation: blink .7s infinite;
-	       }
-	       @keyframes blink {
-	           0% {
-	               opacity: 1;
-	           }
-	           50% {
-	               opacity: 0;
-	           }
-	           100% {
-	               opacity: 1;
-	           }
-	       }
-	       .spotlights > section > .image {
-	           background-position: center center;
-	           background-size: cover;
-	           border-radius: 0;
-	           display: block;
-	           position: relative;
-	           width: 25em;
-	       }
-	</style>
 	<script src="assets/js/jquery.min.js">
 	</script> 
 	<script src="assets/js/jquery.scrollex.min.js">
