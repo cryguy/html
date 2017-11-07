@@ -4,6 +4,7 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
     <title>Imanity.US</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,6 +36,17 @@
                 return false;
             });
         });
+		var egg = new Egg();
+egg
+  .addCode("up,up,down,down,left,right,left,right,b,a", function() {
+    jQuery('#egggif').fadeIn(500, function() {
+      window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+    });
+  })
+  .addHook(function(){
+    console.log("Hook called for: " + this.activeEgg.keys);
+    console.log(this.activeEgg.metadata);
+  }).listen();
     </script>
     
     <section id="sidebar" class="split">
@@ -57,8 +69,7 @@
             </nav>
         </div>
     </section>
-
-    
+    <img id="egggif" src="http://media.giphy.com/media/4hnQDVKVARZ6w/giphy.gif" style="display: none;">
     <div id="wrapper">
         
         <section id="home" class="bg wrapper style1 fullscreen fade-up">
